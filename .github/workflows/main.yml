@@ -216,7 +216,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.10'
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: binaries.linux
           path: release/dist
@@ -254,19 +254,19 @@ jobs:
           python-version: '3.10'
       - run: sudo apt-get update
       - run: sudo apt-get install -y twine awscli
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: docs
           path: docs/public
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: binaries.windows
           path: release/dist
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: binaries.linux
           path: release/dist
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: binaries.macos
           path: release/dist
